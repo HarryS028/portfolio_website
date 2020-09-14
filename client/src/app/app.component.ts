@@ -31,4 +31,11 @@ export class AppComponent {
     this.projectComponent = true;
     this.contactComponent = false;
   };
+
+  loadContactComponent () {
+    this.aboutComponent = false;
+    this.skillsComponent = false;
+    this.projectComponent = false;
+    this.contactComponent = true;
+  };
 }

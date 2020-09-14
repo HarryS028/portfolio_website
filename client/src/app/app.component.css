@@ -3,6 +3,23 @@
 }
 
 .top-text{
-    background-color: red;
     height: 250px;
+    position: relative;
+}
+
+.bottom-text{
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%
+}
+
+.nav-bar{
+    background-color: cornsilk;
+    height: 50px;
+}
+
+.nav-bar-2{
+    background-color: crimson;
+    width: 100%;
 }

@@ -11,20 +11,26 @@
       </div>
 
       <div class="top-text">
-        <h1 class="name">Harry Shuttleworth</h1>
-        <p> &lt; Web and blockchain developer &gt; </p>
+        <div class="bottom-text">
+          <h1 class="name">Harry Shuttleworth</h1>
+          <p> &lt; Web and blockchain developer &gt; </p>
+        </div>
       </div>
 
-      <div>
-        <button (click)="loadAboutComponent();">About</button>
-        <button (click)="loadProjectsComponent();">Projects</button>
-        <button (click)="loadSkillsComponent();">Skills</button>
+      <div class="nav-bar-2">
+          <div>
+            <button (click)="loadAboutComponent();">About</button>
+            <button (click)="loadProjectsComponent();">Projects</button>
+            <button (click)="loadSkillsComponent();">Skills</button>
+            <button (click)="loadContactComponent();">Contact</button>
+          </div>
       </div>
 
       <div>
         <app-about *ngIf="aboutComponent"></app-about>        
         <app-projects *ngIf="projectComponent"></app-projects>
         <app-skills *ngIf="skillsComponent"></app-skills>
+        <app-contact *ngIf="contactComponent"></app-contact>
       </div>
     </body>
 
