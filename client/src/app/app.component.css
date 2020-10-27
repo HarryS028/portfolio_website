@@ -1,5 +1,7 @@
 .name{
     text-align: center;
+    color: black;
+    letter-spacing: 0.3px;
 }
 
 .top-text{
@@ -20,6 +22,80 @@
 }
 
 .nav-bar-2{
-    background-color: crimson;
-    width: 100%;
+    width: 40%;
+    display: flex;
+    margin: auto;
+    margin-top: 30px;
+    margin-right: 5%;
+    margin-left: 55%;
 }
+
+button{
+    display: inline-block;
+    width: 25%;
+    height: 40px;
+    font-size: 20px;
+    background: none;
+    border-radius: 0px;
+    border: none;
+    outline: none;
+    /*box-shadow: 5px 5px 4px #888888;*/
+    /*color: black;*/
+    transition: 1s;
+    overflow: hidden;
+    margin-top: 5px;
+    background: rgba(255, 255, 255, 0);
+}
+
+button:focus {
+    outline: none;
+}
+
+button:before {
+    content: '';
+    display: block;
+    background: rgba(255,255,255,0.5);
+    opacity: 0.5;
+    filter: blur(30px);
+    transform: translateX(-130px) skewX(-15deg);
+}
+
+button:after {
+    content: '';
+    display: block;
+    background: rgba(255,255,255,.2);
+    opacity: 0;
+    filter: blur(30px);
+    transform: translateX(-100px) scaleX(-15deg);
+}
+
+button:hover {
+   background: #6C7F8D;
+   cursor: pointer;
+}
+
+button:hover:before {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: .6;
+    transition: .7s;
+}
+
+button:hover:after {
+    transform: translateX(300px) skewX(-15deg);
+    opacity: 1;
+    transition: .7s;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.logo{
+    width: 5%;
+    padding: none;
+    position: absolute;
+    left: 1%;
+    top: 1%;
+}
+

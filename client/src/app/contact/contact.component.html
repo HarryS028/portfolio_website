@@ -1,4 +1,26 @@
-<div class="primary-container">
-    <p>contact works!</p>
-</div>
+<html>
+    <header>
+        <script src="https://requirejs.org/docs/release/2.3.6/comments/require.js"></script>
+        <script type="module" src="../../../server.js"></script>
+    </header>
+
+    <div class="primary-container">
+        <h3>Talk to me</h3>
+        <div class="wrapper">
+            <div class="contact-form">
+                <div class="input-fields">
+                    <input #name type="text" class="input" placeholder="Name">
+                    <input #email type="text" class="input" placeholder="Email address">
+                    <input type="text" class="input" placeholder="Phone">
+                    <input type="text" class="input" placeholder="Subject">
+                </div>
+                <div class="msg">
+                    <textarea placeholder="Message"></textarea>
+                    <div (click)="createNewMessage()" id="testbutton" class="btn">Send</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</html>
 

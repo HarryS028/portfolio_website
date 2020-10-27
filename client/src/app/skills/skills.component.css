@@ -10,3 +10,24 @@ ul {
 li {
     vertical-align: middle;
 }
+
+.tech-skills-icons img {
+    width: 50%;
+}
+
+.other-skills-icons img {
+    width: 37%;
+}
+
+.technical-header {
+    text-align: center;
+
+}
+
+table {
+    margin: 5%;
+}
+
+th {
+    font-weight: normal;
+}

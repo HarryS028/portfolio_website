@@ -1,36 +1,30 @@
 <!DOCTYPE html>
   <html>
     <head>
+      <script src="https://requirejs.org/docs/release/2.3.6/comments/require.js"></script>
       <link rel="stylesheet" type="text/css" href="app.component.css">
       <title>Harry Shuttleworth</title>
     </head>
     <body>
-      <div class="nav-bar">
-        
-        <p>nav bar here</p>
-      </div>
 
-      <div class="top-text">
-        <div class="bottom-text">
-          <h1 class="name">Harry Shuttleworth</h1>
-          <p> &lt; Web and blockchain developer &gt; </p>
-        </div>
+      <div class="logo">
+        <img src="../assets/images/blue-logo-round.png" alt="Harry Logo">
       </div>
 
       <div class="nav-bar-2">
-          <div>
-            <button (click)="loadAboutComponent();">About</button>
-            <button (click)="loadProjectsComponent();">Projects</button>
-            <button (click)="loadSkillsComponent();">Skills</button>
-            <button (click)="loadContactComponent();">Contact</button>
-          </div>
+          <button routerLink="/">Home</button>
+          <button routerLink="/about">About</button>
+          <button routerLink="/projects">Projects</button>
+          <button routerLink="/skills">Skills</button>
+          <button routerLink="/contact">Contact</button>
       </div>
 
       <div>
-        <app-about *ngIf="aboutComponent"></app-about>        
-        <app-projects *ngIf="projectComponent"></app-projects>
-        <app-skills *ngIf="skillsComponent"></app-skills>
-        <app-contact *ngIf="contactComponent"></app-contact>
+        <router-outlet></router-outlet>
+      </div>
+
+      <div>
+
       </div>
     </body>
 

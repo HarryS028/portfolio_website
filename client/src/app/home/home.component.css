@@ -1,0 +1,39 @@
+.desc {
+    left: 5%;
+    position: absolute;
+    top: 30%;
+    padding: none;
+    height: 100px;
+    width: 90%;
+    text-align: center;
+}
+
+img {
+    max-height: 100%;
+    width: auto;
+}
+
+.tag-line{
+    width: 90%;
+    left: 5%;
+    top: 43%;
+    position: absolute;
+    text-align: center;
+    font-size: large;
+    font-weight: normal;
+}
+
+.call-to-action p {
+    display: inline-block;
+    margin: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+.call-to-action{
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    left: 5%;
+    width: 90%;
+}

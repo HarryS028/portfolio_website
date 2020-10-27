@@ -1,4 +1,9 @@
 import { Component } from '@angular/core';
+import { ProjectsComponent } from './projects/projects.component';
+import { SkillsComponent } from './skills/skills.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
 
 @Component({
   selector: 'app-root',
@@ -6,36 +11,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  aboutComponent = true;
-  skillsComponent = false;
-  projectComponent = false;
-  contactComponent = false;
 
-  loadAboutComponent () {
-    this.aboutComponent = true;
-    this.skillsComponent = false;
-    this.projectComponent = false;
-    this.contactComponent = false;
-  }; 
-  
-  loadSkillsComponent () {
-    this.aboutComponent = false;
-    this.skillsComponent = true;
-    this.projectComponent = false;
-    this.contactComponent = false;
-  };
-
-  loadProjectsComponent () {
-    this.aboutComponent = false;
-    this.skillsComponent = false;
-    this.projectComponent = true;
-    this.contactComponent = false;
-  };
-
-  loadContactComponent () {
-    this.aboutComponent = false;
-    this.skillsComponent = false;
-    this.projectComponent = false;
-    this.contactComponent = true;
-  };
 }
