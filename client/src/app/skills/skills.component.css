@@ -21,7 +21,6 @@ li {
 
 .technical-header {
     text-align: center;
-
 }
 
 table {
@@ -30,4 +29,10 @@ table {
 
 th {
     font-weight: normal;
+}
+
+@media screen and (max-width: 1500px){
+    .technical-header img {
+        width: 8vw;
+    }
 }

@@ -7,16 +7,17 @@
 .image img {
     display: inline-block;
     height: auto;
-    width: 100%;
+    width: 400px;
 }
 
 .content {
     display: inline-block;
+    width: 500px;
 }
 
 .image {
     margin-right: 5%;
-    width: 120%;
+    width: 40%;
 }
 
 .content img {
@@ -34,4 +35,14 @@
     background-color: #9eadad;
     padding: 2%;
     border-radius: 20px;
+}
+
+.project-header{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 1500px){
+    .project{
+        flex-direction: column;
+    }
 }

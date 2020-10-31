@@ -8,9 +8,9 @@ export class MessageService {
 
   constructor(private webReqService: WebRequestService) { }
 
-  createMessage(message: String) {
+  createMessage(name: String, email: String, phone: String, subject: String, message: String) {
     // We want to send a web request to send a message
-    return this.webReqService.post('messages', { "message_body": message });
+    return this.webReqService.post('messages', { "name": name, "email": email, "phone": phone, "subject": subject, "message_body": message });
   }
 
   getMessage() {

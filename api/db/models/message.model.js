@@ -6,6 +6,30 @@ const MessageSchema = new mongoose.Schema({
         required: true,
         minlength: 1,
         trim: true
+    },
+    name: {
+        type: String,
+        required: true,
+        minlength: 1,
+        trim: true
+    },
+    email: {
+        type: String,
+        required: true,
+        minlength: 1,
+        trim: true
+    },
+    phone: {
+        type: String,
+        required: true,
+        minlength: 1,
+        trim: true
+    },
+    subject: {
+        type: String,
+        required: true,
+        minlength: 1,
+        trim: true
     }
 })
 

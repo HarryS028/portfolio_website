@@ -32,3 +32,9 @@ html {
 html * {
     font-family: Century Gothic !important;
 }
+
+@media screen and (max-width: 1000px){
+    .primary-container{
+        min-width: 500px;
+    }
+}

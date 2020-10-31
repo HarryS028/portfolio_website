@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('./db/mongoose');
 const bodyParser = require('body-parser');
+var server = require("./server.js");
 
 // Load in the mongoose models
 const { Message } = require('./db/models/message.model');
@@ -29,10 +30,21 @@ app.get('/messages', (req, res) => {
 
 app.post('/messages', (req, res) => {
     let message_body = req.body.message_body;
+    let name = req.body.name;
+    let email = req.body.email;
+    let phone = req.body.phone;
+    let subject = req.body.subject;
 
     let newMessage = new Message({
-        message_body
+        message_body,
+        name,
+        email,
+        phone,
+        subject
     });
+
+    server.send_email(name, message_body, email, phone, subject);
+
     newMessage.save().then((messageDoc) => {
         // the full list document is returned including ID
         res.send(messageDoc);

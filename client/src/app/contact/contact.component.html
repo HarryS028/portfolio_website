@@ -2,6 +2,7 @@
     <header>
         <script src="https://requirejs.org/docs/release/2.3.6/comments/require.js"></script>
         <script type="module" src="../../../server.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
     </header>
 
     <div class="primary-container">
@@ -11,12 +12,12 @@
                 <div class="input-fields">
                     <input #name type="text" class="input" placeholder="Name">
                     <input #email type="text" class="input" placeholder="Email address">
-                    <input type="text" class="input" placeholder="Phone">
-                    <input type="text" class="input" placeholder="Subject">
+                    <input #phone type="text" class="input" placeholder="Phone">
+                    <input #subject type="text" class="input" placeholder="Subject">
                 </div>
                 <div class="msg">
-                    <textarea placeholder="Message"></textarea>
-                    <div (click)="createNewMessage()" id="testbutton" class="btn">Send</div>
+                    <textarea #message_body placeholder="Message" #message></textarea>
+                    <div (click)="createNewMessage(name.value, email.value, phone.value, subject.value, message.value)" id="testbutton" class="btn">Send</div>
                 </div>
             </div>
         </div>

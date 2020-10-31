@@ -1,32 +1,29 @@
-const express = requirejs('express');
+const express = require('express');
+const nodemailer = require('nodemailer')
 
 const log = console.log;
 const app = express();
-
 const PORT = 8080;
 
 app.listen(PORT, () => {
     log('Server is starting on port, ', 8080);
 });
 
-function mailer() {
-    //import { nodemailer } from "./node_modules/nodemailer/lib/nodemailer"
-    // <script src="https://requirejs.org/docs/release/2.3.6/comments/require.js"></script>
-    //const nodemailer = requirejs('nodemailer');
-    // import * as nodemailer from 'nodemailer' 
+function send_email(name, message_body, email, phone, subject) {
+
     let transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'hs.portolfio@gmail.com',
+            user: 'hs.portfoliocontact@gmail.com',
             pass: 'T84?yrS@5'
         }
     });
 
     let mailOptions = {
-        from: 'hs.portfolio@gmail.com',
+        from: 'hs.portfoliocontact@gmail.com',
         to: 'hshuttleworth0@gmail.com',
         subject: 'Portfolio enquiry',
-        text: 'test text'
+        text: "Name: " + name + ", Email: " + email + ",Subject: " + subject + ", Message Body: " + message_body + ", Phone: " + phone
     };
 
     transporter.sendMail(mailOptions, function(err, data) {
@@ -41,4 +38,6 @@ function mailer() {
 }
 
 
-console.log(mailer())
+
+module.exports.send_email = send_email;
+//console.log(send_email())
