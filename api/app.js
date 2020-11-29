@@ -4,6 +4,8 @@ const mongoose = require('./db/mongoose');
 const bodyParser = require('body-parser');
 var server = require("./server.js");
 
+const port = process.env.PORT || 8080;
+
 // Load in the mongoose models
 const { Message } = require('./db/models/message.model');
 
@@ -61,6 +63,6 @@ app.delete('/messages/:id', (req, res) => {
 })
 
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log("Server is listening on port 3000");
 })

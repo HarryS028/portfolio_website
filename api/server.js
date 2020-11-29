@@ -3,10 +3,10 @@ const nodemailer = require('nodemailer')
 
 const log = console.log;
 const app = express();
-const PORT = 8080;
+const port = process.env.PORT || 8080;
 
-app.listen(PORT, () => {
-    log('Server is starting on port, ', 8080);
+app.listen(port, () => {
+    log('Server is starting on port, ', port);
 });
 
 function send_email(name, message_body, email, phone, subject) {
