@@ -37,3 +37,13 @@ img {
     left: 5%;
     width: 90%;
 }
+
+#link-block img {
+    width: 2.5%;
+    margin-right: 2%;
+}
+
+#link-block {
+    text-align: center;
+    margin-top: 26%;
+}
