@@ -4,7 +4,7 @@ const mongoose = require('./db/mongoose');
 const bodyParser = require('body-parser');
 var server = require("./server.js");
 
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3000;
 
 // Load in the mongoose models
 const { Message } = require('./db/models/message.model');
