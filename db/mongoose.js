@@ -1,8 +1,9 @@
 // This file will handle connection logic to MongoDB
-
+require('dotenv').config();
 const mongoose = require('mongoose')
-const MONGODB_URI = 'mongodb+srv://HarryS028:6c3tyBS5@portfolio.rdfwi.mongodb.net/<dbname>?retryWrites=true&w=majority';
+const MONGODB_URI = 'mongodb+srv://HarryS028:' + process.env.DBPASSWORD + '@portfolio.rdfwi.mongodb.net/<dbname>?retryWrites=true&w=majority';
 
+process.env.PASSWORD
 mongoose.Promise = global.Promise;
 mongoose.connect(MONGODB_URI || 'mongodb://localhost:27017/ContactManager', { useNewUrlParser: true }).then(() => {
     console.log("Connected to MongoDB successfully");
