@@ -1,7 +1,7 @@
 // This file will handle connection logic to MongoDB
 require('dotenv').config();
 const mongoose = require('mongoose')
-const MONGODB_URI = 'mongodb+srv://HarryS028:' + process.env.DBPASSWORD + '@portfolio.rdfwi.mongodb.net/<dbname>?retryWrites=true&w=majority';
+const MONGODB_URI = 'mongodb+srv://' + process.env.DBUSERNAME + ':' + process.env.DBPASSWORD + '@portfolio.rdfwi.mongodb.net/<dbname>?retryWrites=true&w=majority';
 
 process.env.PASSWORD
 mongoose.Promise = global.Promise;
