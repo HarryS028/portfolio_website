@@ -12,6 +12,10 @@ const { Message } = require('./db/models/message.model');
 // Load middleware
 app.use(bodyParser.json());
 
+// Create link to Angular build directory
+var distDir = __dirname + "/public/";
+app.use(express.static(distDir));
+
 // cors headers middleware
 app.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*"); // update to match the domain you will make the request from
